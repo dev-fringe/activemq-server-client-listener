@@ -10,7 +10,7 @@ import dev.fringe.activemq.model.Email;
 
 
 @Import(value = {ActiveMqCommonConfig.class, ActiveMqListenerConfig.class})
-public class Receiver {
+public class Listener {
 
     @JmsListener(destination = "mailbox", containerFactory  = "listenerFactory")
     public void receiveMessage(Email email) {
@@ -24,6 +24,6 @@ public class Receiver {
         
     }
     public static void main(String[] args) {
-    	new AnnotationConfigApplicationContext(Receiver.class);   
+    	new AnnotationConfigApplicationContext(Listener.class);   
     }
 }
