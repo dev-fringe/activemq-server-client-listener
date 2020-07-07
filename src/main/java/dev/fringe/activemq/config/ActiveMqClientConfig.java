@@ -20,13 +20,4 @@ public class ActiveMqClientConfig {
 		return template;
 	}
 	
-	@Bean
-	public JmsTemplate jmsTemplate2(MessageConverter jacksonJmsMessageConverter, ConnectionFactory connectionFactory2) {
-		JmsTemplate template = new JmsTemplate();
-		template.setMessageConverter(jacksonJmsMessageConverter);
-		template.setConnectionFactory(connectionFactory2);
-		template.setDefaultDestination(new ActiveMQQueue("ps"));
-		return template;
-	}
-	
 }

@@ -15,13 +15,6 @@ public class ActiveMqCommonConfig {
 	@Bean
 	public ConnectionFactory connectionFactory() {
 		ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory();
-		connectionFactory.setBrokerURL("tcp://localhost:61617");
-		return connectionFactory;
-	}
-	
-	@Bean
-	public ConnectionFactory connectionFactory2() {
-		ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory();
 		connectionFactory.setBrokerURL("tcp://localhost:61616");
 		return connectionFactory;
 	}

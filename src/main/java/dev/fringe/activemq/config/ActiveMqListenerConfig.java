@@ -19,12 +19,4 @@ public class ActiveMqListenerConfig {
 		factory.setMessageConverter(jacksonJmsMessageConverter);
 		return factory;
 	}
-
-	@Bean
-	public DefaultJmsListenerContainerFactory listenerFactory2(ConnectionFactory connectionFactory2, MessageConverter jacksonJmsMessageConverter) {
-		DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
-		factory.setConnectionFactory(connectionFactory2);
-		factory.setMessageConverter(jacksonJmsMessageConverter);
-		return factory;
-	}
 }
